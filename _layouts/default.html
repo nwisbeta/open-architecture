@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }} | {{ site.title }}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap/docs/4.4/docs.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">     
+    </head>
+    <body>        
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+        <nav class="navbar navbar-dark bg-dark bd-navbar">
+                <a class="navbar-brand" href="#">{{ site.title }}</a>
+        </nav>
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          {% include sidebar.html %}
+        </div>
+
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          {% if site.github_editme_path %}
+
+          <a target="_blank" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="btn btn-outline-primary" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+      
+          {% endif %}
+
+          <h1 class="bd-title" id="content">{{ page.title | smartify }}</h1>
+          <p class="bd-lead">{{ page.description | smartify }}</p>
+          {{ content }}
+        </main>
+      </div>
+    </div>
+    <footer style="text-align: right">
+      &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}.
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/mermaid-render.js"></script>
+
+    <script src="{{ site.baseurl }}/assets/js/deflate.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/plantuml-render.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,10 @@
+version: "3" 
+services:
+  server: 
+    image: jekyll/jekyll
+    entrypoint: ["jekyll", "serve", "-H", "0.0.0.0"]
+    ports:
+    - "4000:4000"
+    working_dir: /src
+    volumes:
+    - ".:/src"        
