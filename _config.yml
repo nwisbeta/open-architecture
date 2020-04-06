@@ -1,5 +1,7 @@
 title: NHS Wales Open Architecture Docs
 
+company_name: NHS Wales
+
 baseurl: /open-architecture
 
 plugins:
