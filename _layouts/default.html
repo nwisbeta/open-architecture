@@ -34,12 +34,13 @@
           <h1 class="bd-title" id="content">{{ page.title | smartify }}</h1>
           <p class="bd-lead">{{ page.description | smartify }}</p>
           {{ content }}
+          <div style="text-align: right">
+            &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}.
+          </div>
         </main>
       </div>
     </div>
-    <footer style="text-align: right">
-      &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}.
-    </footer>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/mermaid-render.js"></script>
