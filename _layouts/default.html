@@ -2,9 +2,10 @@
 <html>
     <head>
         <title>{{ page.title }} | {{ site.title }}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap/docs/4.4/docs.min.css">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">     
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/gig-cymru.css">
     </head>
     <body>        
     <a id="skippy" class="sr-only sr-only-focusable" href="#content">
@@ -13,8 +14,11 @@
       </div>
     </a>
 
-        <nav class="navbar navbar-dark bg-dark bd-navbar">
-                <a class="navbar-brand" href="#">{{ site.title }}</a>
+        <nav class="navbar navbar-dark bd-navbar bg-gig-cymru">
+          <a class="navbar-brand mr-0 mr-md-2" href="{{ site.baseurl }}/" aria-label="Bootstrap">
+            <img src="{{ site.baseurl }}/assets/images/gig-cymru.png" alt="NHS Wales Logo, Logo GIG Cymru" height="45" width="45" class="mx-2">
+            {{ site.title }}
+          </a>
         </nav>
 
     <div class="container-fluid">
@@ -34,8 +38,8 @@
           <h1 class="bd-title" id="content">{{ page.title | smartify }}</h1>
           <p class="bd-lead">{{ page.description | smartify }}</p>
           {{ content }}
-          <div style="text-align: right">
-            &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}.
+          <div>
+            &copy;{{ site.time | date: "%Y"  }} {{site.org_name}}
           </div>
         </main>
       </div>
