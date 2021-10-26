@@ -7,3 +7,6 @@
   pages:
     - title: Patient Demographics
     - title: PROMs
+- title: Integration Guides
+  pages:
+    - title: WCP Stapling
